@@ -36,7 +36,9 @@ flutter pub get
 * [GetX](https://github.com/jonataslaw/getx)
 * [Storage](https://github.com/jonataslaw/get_storage)
 * [ScreenUtil](https://github.com/OpenFlutter/flutter_screenutil/)
+* [Dio](https://github.com/flutterchina/dio)
 * [Intl](https://github.com/dart-lang/intl)
+* [logger](https://github.com/simc/logger)
 
 ### Folder Structure
 Here is the core folder structure which flutter provides.
@@ -61,21 +63,26 @@ lib/
 ```
 app/
 |- common/
+   |- logger/
    |- storage/
    |- util/
    |- values/
    |- constants.dart
+|- domain/
+   |- entities/
+   |- repositories/
 |- modules/
    |- home/
    |- widgets/
 |- routes/
+main.dart
 ```
 
 Now, lets dive into the lib folder which has the main code for the application.
 
 ```
-1- common - Contains all the utilities/common functions  which are using throughout the app. This directory contains `constants`. `utilities`, `theme`, `strings`, `dimensions`, `storage`, `text styles`, `colors` and `images path`.
-2- data - Contains the data layer of your project.
+1- common - Contains all the utilities/common functions  which are using throughout the app. This directory contains `constants`, `loggers`, `utilities`, `theme`, `strings`, `dimensions`, `storage`, `text styles`, `colors` and `images path`.
+2- domain - Contains the entities layer of your project.
 3- modules - Contains all the ui of your project, contains sub directory for each screen and custo widgets as per the need.
 4- routes - Contains the files for routes for your application.
 5- main.dart - This is the starting point of the application.
