@@ -17,8 +17,40 @@ class Counter extends StatelessWidget {
       appBar: AppBar(
         title: const Text(Strings.appName),
       ),
-      body: Center(
-        child: Obx(() => Text("${controller.count}")),
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Obx(() => Text("${controller.count}")),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                logger.d('Get users button pressed');
+                if (controller.users.isEmpty) {
+                  // Get the list of users
+                  controller.users.value = controller.getUsers();
+                } else {
+                  // Clear the list
+                  controller.users.value = [];
+                }
+              },
+              child: Obx(() =>
+                  Text(controller.users.isEmpty ? "Get Users" : "Clear Users")),
+            ),
+            const SizedBox(height: 20),
+            Obx(
+              () => controller.users.isEmpty
+                  ? const Text("No users")
+                  : Column(
+                      children: controller.users
+                          .map<Widget>((user) =>
+                              Text('${user.firstName} ${user.lastName}'))
+                          .toList(),
+                    ),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
