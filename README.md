@@ -75,9 +75,8 @@ Now, lets dive into the lib folder which has the main code for the application.
 
 ```
 1- common - Contains all the utilities/common functions  which are using throughout the app. This directory contains `constants`. `utilities`, `theme`, `strings`, `dimensions`, `storage`, `text styles`, `colors` and `images path`.
-2- data - Contains the data layer of your project.
-3- modules - Contains all the ui of your project, contains sub directory for each screen and custo widgets as per the need.
-4- routes - Contains the files for routes for your application.
-5- main.dart - This is the starting point of the application.
+2- modules - Contains all the ui of your project, contains sub directory for each screen and custo widgets as per the need.
+3- routes - Contains the files for routes for your application.
+4- main.dart - This is the starting point of the application.
 ```
 **NOTE**: You can use [Get Cli](https://github.com/jonataslaw/get_cli) to auto generate ui pages, controllers and routes.
