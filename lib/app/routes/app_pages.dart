@@ -1,6 +1,9 @@
-import 'package:flutter_getx_template/app/modules/home/bindings/home_binding.dart';
-import 'package:flutter_getx_template/app/modules/home/views/home_view.dart';
 import 'package:get/get.dart';
+
+import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/home_view.dart';
+import '../modules/tutorial/bindings/tutorial_binding.dart';
+import '../modules/tutorial/views/tutorial_view.dart';
 
 part 'app_routes.dart';
 
@@ -14,6 +17,11 @@ abstract class AppPages {
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.TUTORIAL,
+      page: () => const TutorialView(),
+      binding: TutorialBinding(),
     ),
   ];
 }

@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="${applicationName}"
-        android:label="flutter_getx_template"
+        android:label="Flutter Tutorial"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

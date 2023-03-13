@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_template/app/common/util/exports.dart';
 import 'package:flutter_getx_template/app/modules/home/controllers/home_controller.dart';
+import 'package:flutter_getx_template/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 class Counter extends StatelessWidget {
@@ -48,6 +49,16 @@ class Counter extends StatelessWidget {
                               Text('${user.firstName} ${user.lastName}'))
                           .toList(),
                     ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                logger.d('Get posts button pressed');
+
+                // Get navigate to the tutorial page
+                Get.toNamed(Routes.TUTORIAL);
+              },
+              child: Text("Open Tutorial Page"),
             ),
           ],
         ),
