@@ -41,12 +41,16 @@ dependencies:
 
   # for logger purpose
   logger: ^1.1.0
+  flutter_app_name: ^0.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.1
+
+flutter_app_name:
+  name: 'Flutter Tutorial'
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
